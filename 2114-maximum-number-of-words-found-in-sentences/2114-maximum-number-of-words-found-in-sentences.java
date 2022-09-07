@@ -3,8 +3,13 @@ class Solution {
         int word=1;
         int maxWord=0;
         for(int i=0;i<sentences.length;i++){
-            String[] str=sentences[i].split(" ");
-            maxWord=Math.max(maxWord,str.length);
+            for(int j=0;j<sentences[i].length();j++){
+                if(sentences[i].charAt(j)==' '){
+                    word++;
+                }
+                maxWord=Math.max(maxWord,word);
+            }
+            word=1;
         }
         return maxWord;
     }
