@@ -12,7 +12,6 @@ class Solution {
         Arrays.sort(arr);
         int ans=0;
         int mod = 1000000007;
-        Arrays.sort(arr);
         for(int i=left-1;i<right;i++){
             ans=(ans+arr[i])%mod;
         }
