@@ -13,11 +13,12 @@ class Solution {
                 st.pop();
             }
         }
-        while(!st.isEmpty()){
-            sb.append(st.pop());
+        for(Character ch:st){
+            sb.append(ch);
         }
         
         
-        return sb.reverse().toString();
+        
+        return sb.toString();
     }
 }
