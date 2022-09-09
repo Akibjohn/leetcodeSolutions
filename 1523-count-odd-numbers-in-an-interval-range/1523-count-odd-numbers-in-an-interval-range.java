@@ -1,22 +1,11 @@
 class Solution {
-    public boolean isEven(int low){
-        if(low%2==0){
-            return true;
-        }
-        return false;
-    }
     public int countOdds(int low, int high) {
-        int count=0;
-        int i;
-        if(isEven(low)){
-            i=low+1;
+        int ans = (high-low)/2;
+        if(low%2 == 0 && high%2 == 0){
+            return ans;
         }else{
-            i=low;
+            return ans+1;
         }
-        for(int idx=i;i<=high;i+=2){
-            count++;
-        }
-        return count;
-        
+       
     }
 }
