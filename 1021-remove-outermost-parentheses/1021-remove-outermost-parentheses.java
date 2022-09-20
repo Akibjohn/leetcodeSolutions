@@ -4,7 +4,7 @@ class Solution {
         Stack<Character> st=new Stack<>();
         for(char ch: str.toCharArray()){
            if(ch=='('){
-               if(!st.isEmpty()) sb.append(ch);
+               if(st.size()>=1) sb.append(ch);
                st.push(ch);
            }else{
                if(st.size()>1) sb.append(ch);
