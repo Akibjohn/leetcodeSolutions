@@ -13,7 +13,6 @@ class Solution {
             i++;
             
         }
-        System.out.println(st);
         return st.isEmpty();
     }
 }
