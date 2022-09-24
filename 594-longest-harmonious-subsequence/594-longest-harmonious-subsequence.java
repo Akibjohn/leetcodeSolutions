@@ -1,6 +1,5 @@
 class Solution {
     public int findLHS(int[] nums) {
-        Arrays.sort(nums);
         HashMap<Integer,Integer> hm=new HashMap<>();
         for(int key: nums){
             hm.put(key,hm.getOrDefault(key,0)+1);
@@ -13,8 +12,5 @@ class Solution {
             }
         }
         return maxFreq;
-        
-        
-        
     }
 }
