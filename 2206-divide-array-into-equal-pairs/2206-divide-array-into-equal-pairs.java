@@ -6,6 +6,7 @@ class Solution {
         }
         
         for(int i: freq) if(i%2!=0) return false;
+        
         return true;
     }
 }
