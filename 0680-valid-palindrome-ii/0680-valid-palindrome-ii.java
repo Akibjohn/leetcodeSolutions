@@ -1,22 +1,27 @@
 class Solution {
-    public boolean palindrom(String str , int i , int j){
-        while(i<=j){
-            if(str.charAt(i) != str.charAt(j)) return false;
-            i++;
-            j--;
+    public boolean isPalindrom(String str, int si, int ei){
+        while(si<ei){
+            if(str.charAt(si)!=str.charAt(ei)) return false;
+            si++;
+            ei--;
         }
         return true;
     }
-    public boolean validPalindrome(String str){
-        int i=0;
-        int j=str.length()-1;
-        while(i<=j){
-            if(str.charAt(i) != str.charAt(j)){
-                return palindrom(str, i+1 ,j) || palindrom(str, i ,j-1);
+    public boolean validPalindrome(String s) {
+        boolean flag1=true;
+        boolean flag2=true;
+        int i=0,n=s.length()-1;
+        while(i<n){
+            if(s.charAt(i)!=s.charAt(n)){
+                flag1=isPalindrom(s,i+1,n);
+                flag2=isPalindrom(s,i,n-1);
+                break;
             }
             i++;
-            j--;
+            n--;
         }
-        return true;
+        if(flag1==true || flag2==true) return true;
+        else return false;
+        
     }
 }
